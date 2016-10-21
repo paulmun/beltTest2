@@ -6,14 +6,14 @@
 
 <p>If the logged in user created or is tagged in these bucket list items, they are able to edit the completion status. They will only be able to edit the items that they have created or are tagged in. Other items are disabled.</p>
 
-<p>Done</p>
+<b>Done</b>
 
 <form ng-repeat="bucket in userPage.buckets | filter:bucket.checked=true">
 	<input type="checkbox" ng-model="bucket.checked" ng-change="checker(bucket._id)" ng-disabled="user._id!=bucket.user && user._id!=bucket.tagged._id">
 	<p>{{bucket.tagged.name}} | {{bucket.title}} - {{bucket.description}} - {{bucket.created_at | date: 'MMM, dd, yyyy'}}</p>
 </form>
 
-<p>Pending</p>
+<b>Pending</b>
 
 <form ng-repeat="bucket in userPage.buckets | filter:bucket.checked=false">
 	<input type="checkbox" ng-model="bucket.checked" ng-change="checker(bucket._id)" ng-disabled="user._id!=bucket.user && user._id!=bucket.tagged._id">
