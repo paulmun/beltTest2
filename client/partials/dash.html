@@ -1,0 +1,25 @@
+<h2>Bucket List</h2>
+<a href="#/dash">Home</a>
+<a href="" ng-click="logout();">Logout</a>
+
+<h2>Welcome, {{user.name}}!</h2>
+<form>
+	{{errors.title.message}}
+	<input type="text" placeholder="Title" ng-model="bucket.title">
+	{{errors.description.message}}
+	<input type="text" placeholder="Description" ng-model="bucket.description">
+	<select ng-model="bucket.tagged">
+		<option ng-repeat="user in users" value="{{user._id}}">{{user.name}}</option>
+	</select>
+	<input type="submit" value="Add to List" ng-click="addBucket()">
+</form>
+
+<p>Before I die I want to..</p>
+
+<form ng-repeat="bucket in user.buckets">
+	<input type="checkbox" ng-model="bucket.checked" ng-change="checker(bucket._id)">
+	<p>{{bucket.tagged.name}} | {{bucket.title}} - {{bucket.description}} - {{bucket.created_at | date: 'MMM, dd, yyyy'}}</p>
+</form>
+
+<p>List of other users (Click to view profile):</p>
+<a href="" ng-repeat="user in users" ng-click="showUser(user._id)">{{user.name}}</a>

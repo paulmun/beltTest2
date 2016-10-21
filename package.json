@@ -1,0 +1,29 @@
+{
+  "name": "gulp-expressjs-nodemon-browser-sync",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Hafiz Ismail",
+    "email": "hafiz@wehavefaces.net",
+    "url": "http://wehavefaces.net"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "browser-sync": "^2.17.0",
+    "browsersync": "0.0.1-security",
+    "ejs": "^2.5.2",
+    "express": "^4.8.2",
+    "mongoose": "^4.6.3",
+    "mongoose-deep-populate": "^3.0.0",
+    "mongoose-unique-validator": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-nodemon": "^1.0.4"
+  }
+}
